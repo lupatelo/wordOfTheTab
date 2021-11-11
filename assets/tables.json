@@ -1,0 +1,61 @@
+[
+  {
+    "title": "Possessiv artikel",
+    "rows": [
+      {
+        "header": [
+          "",
+          { "colspan": 3, "text": "Singular" },
+          { "rowspan": 2, "text": "Plural" }
+        ]
+      },
+      { "header": ["", "Maskulin", "feminin", "neutral"] },
+      ["ich", "mein", "meine", "mein", "meine"],
+      ["du", "dein", "deine", "dein", "deine"],
+      ["er", "sein", "seine", "sein", "seine"],
+      ["sie", "ihr", "ihre", "ihr", "ihre"]
+    ]
+  },
+  {
+    "title": "Personal Pronoun",
+    "rows": [
+      { "header": ["case", { "text": "pronouns", "colspan": 9 }] },
+      [
+        "nominative",
+        "ich",
+        "du",
+        "er",
+        "sie",
+        "es",
+        "wir",
+        "ihr",
+        "sie",
+        "Sie"
+      ],
+      [
+        "accusative",
+        "mich",
+        "dich",
+        "ihn",
+        "sie",
+        "es",
+        "uns",
+        "euch",
+        "sie",
+        "Sie"
+      ],
+      [
+        "dative",
+        "mir",
+        "dir",
+        "ihm",
+        "ihr",
+        "ihm",
+        "uns",
+        "euch",
+        "ihnen",
+        "Ihnen"
+      ]
+    ]
+  }
+]
