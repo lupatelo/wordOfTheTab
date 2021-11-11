@@ -32,7 +32,7 @@ function renderDataSource(source) {
  * @returns
  */
 async function getDataSources() {
-  const urls = ["assets/words.json", "assets/tables.json"];
+  const urls = ["assets/de-en/words.json", "assets/de-en/tables.json"];
 
   const sources = [];
   for (const url of urls) {
@@ -80,7 +80,7 @@ function buildTable(source) {
               .join("")
           );
         } else {
-          console.log(`DO not know how to intepret this data`);
+          console.error(`DO not know how to intepret this data`);
         }
       }
     });
