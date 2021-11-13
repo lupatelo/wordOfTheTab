@@ -12,3 +12,7 @@ To get to know more abotu chrome extensions check the [official docs](https://de
 - **newTab.css** - Styling
 - **newTab.html** - Main html file
 - **newTab.js** - Extension logic
+
+## Settings
+
+The settings are saved on the [storage sync](https://developer.chrome.com/docs/extensions/reference/storage/#property-sync)

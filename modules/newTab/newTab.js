@@ -33,13 +33,16 @@ function renderDataSource(source) {
  */
 async function getDataSources() {
   return new Promise(async (resolve) => {
-    chrome.storage.sync.get("sourceFolders", async (sourceFolders) => {
-      if (!sourceFolders) {
-        sourceFolders = ["de-en"];
-      }
+    chrome.storage.sync.get("sourceFolders", async (settings) => {
+      const { sourceFolders = ["de-en"] } = settings;
       console.log({ sourceFolders });
-
-      const urls = ["assets/de-en/words.json", "assets/de-en/tables.json"];
+      const urlPrefix = "../../assets";
+      const urls = [];
+      sourceFolders.forEach((folder) => {
+        availableDataSources.forEach((dataSource) => {
+          urls.push(`${urlPrefix}/${folder}/${dataSource}`);
+        });
+      });
 
       const sources = [];
       for (const url of urls) {
@@ -121,3 +124,5 @@ function buildDictionary(source) {
   wordContainer.classList.remove("hidden");
   document.querySelector("#mainContent").classList.add(`pallete_${colorIndex}`);
 }
+
+const availableDataSources = ["words.json", "tables.json"];
