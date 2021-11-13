@@ -2,7 +2,6 @@
   let currentSettings = {};
   const onLoad = async () => {
     currentSettings = await loadSettings();
-    console.log({ currentSettings });
     initializeForms();
   };
 
@@ -14,8 +13,6 @@
       "input[type=checkbox][name=dataSources]"
     );
     checkboxes.forEach((checkbox) => {
-      console.log({ currentSettings });
-
       if (currentSettings.sourceFolders.includes(checkbox.value)) {
         checkbox.checked = true;
       }
