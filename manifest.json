@@ -7,8 +7,9 @@
     "service_worker": "background.js"
   },
   "chrome_url_overrides": {
-    "newtab": "newTab.html"
+    "newtab": "modules/newTab/index.html"
   },
+  "options_page": "modules/options/index.html",
   "permissions": ["storage", "scripting", "tabs"],
   "action": {
     "default_icon": {
