@@ -35,7 +35,6 @@ async function getDataSources() {
   return new Promise(async (resolve) => {
     chrome.storage.sync.get("sourceFolders", async (settings) => {
       const { sourceFolders = ["de-en"] } = settings;
-      console.log({ sourceFolders });
       const urlPrefix = "../../assets";
       const urls = [];
       sourceFolders.forEach((folder) => {
